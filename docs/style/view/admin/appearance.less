@@ -1,0 +1,110 @@
+.admin-appearance-view {
+    display       : flex;
+    flex-direction: column;
+    width         : 100%;
+
+    >header {
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        width           : 100%;
+        background-color: #fff;
+        color           : rgb(0, 0, 0);
+        box-shadow      : rgb(10 11 13 / 8%) 0px 2px 4px 0px;
+        height          : 64px;
+        padding         : 0px 8px;
+
+        >.tab-container {
+            max-width      : 1240px;
+            width          : 100%;
+            display        : flex;
+            align-items    : center;
+            justify-content: space-between;
+            height         : 100%;
+
+            >a {
+                display    : flex;
+                align-items: center;
+                height     : 100%;
+                font-size  : 16px;
+                font-weight: 500;
+                color      : #aaa;
+
+                &:hover {
+                    color        : #000;
+                    border-bottom: 2px #000 solid;
+                }
+            }
+
+            >.active {
+                color        : #000;
+                border-bottom: 2px #000 solid;
+            }
+        }
+    }
+
+    >article {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        max-width      : 1240px;
+        width          : 100%;
+        margin         : auto;
+        padding-top    : 32px;
+        padding-left   : 8px;
+        padding-right  : 8px;
+
+        >h1 {
+            font-size  : 20px;
+            font-weight: 600;
+            width      : 100%;
+        }
+
+        >h2 {
+            margin-top : 16px;
+            font-size  : 18px;
+            font-weight: 600;
+            width      : 100%;
+        }
+
+        >p {
+            margin-top : 16px;
+            font-size  : 14px;
+            font-weight: 300;
+        }
+
+        >section {
+            background-color: #fff;
+            color           : rgb(0, 0, 0);
+            box-shadow      : rgb(10 11 13 / 8%) 0px 2px 4px 0px;
+            border-radius   : 4px;
+            padding         : 16px;
+            margin-top      : 16px;
+        }
+
+        >.profile-container {
+            >.input-container {
+                display       : flex;
+                flex-direction: column;
+                margin-top    : 8px;
+                gap           : 8px;
+
+                >p {
+                    font-size  : 14px;
+                    font-weight: 400;
+                }
+
+                >input {
+                    padding      : 8px;
+                    border-bottom: 1px solid #aaa;
+                }
+
+                >textarea {
+                    padding      : 8px;
+                    border       : 1px solid #aaa;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
