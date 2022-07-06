@@ -676,7 +676,7 @@ body {
 }
 .graph-tree-view > section {
   width: 100%;
-  min-height: 500px;
+  min-height: 754px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -735,6 +735,11 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   gap: 32px;
+}
+@media only screen and (max-width: 719px) {
+  .admin-link-view > article {
+    flex-direction: column;
+  }
 }
 .admin-link-view > article > .setting-container {
   width: 100%;

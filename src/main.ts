@@ -5,7 +5,7 @@ import AdminAnalytics from "./view/admin/Analytics";
 import AdminAppearance from "./view/admin/Appearance";
 import AdminLink from "./view/admin/Link";
 import AdminSettings from "./view/admin/Settings";
-import GraphTree from "./view/Graph";
+import GraphTree from "./view/GraphTree";
 import LinkTree from "./view/LinkTree";
 import UserLayout from "./view/UserLayout";
 
