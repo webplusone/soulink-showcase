@@ -1234,6 +1234,11 @@
   "resolved" "https://registry.npmjs.org/@xtuc/long/-/long-4.2.2.tgz"
   "version" "4.2.2"
 
+"@yomguithereal/helpers@^1.1.1":
+  "integrity" "sha512-UYvAq/XCA7xoh1juWDYsq3W0WywOB+pz8cgVnE1b45ZfdMhBvHDrgmSFG3jXeZSr2tMTYLGHFHON+ekG05Jebg=="
+  "resolved" "https://registry.npmjs.org/@yomguithereal/helpers/-/helpers-1.1.1.tgz"
+  "version" "1.1.1"
+
 "abstract-leveldown@~2.6.0":
   "integrity" "sha512-2++wDf/DYqkPR3o5tbfdhF96EfMApo1GpPfzOsR/ZYXdkSmELlvOOEAl9iKkRsktMPHdGjO4rtkBpf2I7TiTeA=="
   "resolved" "https://registry.npmjs.org/abstract-leveldown/-/abstract-leveldown-2.6.3.tgz"
@@ -2783,7 +2788,7 @@
   "resolved" "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
   "version" "4.0.7"
 
-"events@^3.0.0", "events@^3.2.0":
+"events@^3.0.0", "events@^3.2.0", "events@^3.3.0":
   "integrity" "sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q=="
   "resolved" "https://registry.npmjs.org/events/-/events-3.3.0.tgz"
   "version" "3.3.0"
@@ -3132,6 +3137,24 @@
   "integrity" "sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA=="
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.10.tgz"
   "version" "4.2.10"
+
+"graphology-types@>=0.23.0", "graphology-types@>=0.24.0":
+  "integrity" "sha512-CSgmycWiviCctMFO86YoUTJN1t4/PLKC5Pos2Hite+7kCUXTr+mGlDUAOgpcKG1IfFaeL9VDmTjFpzs2rTnPWw=="
+  "resolved" "https://registry.npmjs.org/graphology-types/-/graphology-types-0.24.4.tgz"
+  "version" "0.24.4"
+
+"graphology-utils@^2.5.0":
+  "integrity" "sha512-ckHg8MXrXJkOARk56ZaSCM1g1Wihe2d6iTmz1enGOz4W/l831MBCKSayeFQfowgF8wd+PQ4rlch/56Vs/VZLDQ=="
+  "resolved" "https://registry.npmjs.org/graphology-utils/-/graphology-utils-2.5.2.tgz"
+  "version" "2.5.2"
+
+"graphology@^0.24.1":
+  "integrity" "sha512-6lNz1PNTAe9Q6ioHKrXu0Lp047sgvOoHa4qmP/8mnJWCGv2iIZPQkuHPUb2/OWDWCqHpw2hKgJLJ55X/66xmHg=="
+  "resolved" "https://registry.npmjs.org/graphology/-/graphology-0.24.1.tgz"
+  "version" "0.24.1"
+  dependencies:
+    "events" "^3.3.0"
+    "obliterator" "^2.0.2"
 
 "har-schema@^2.0.0":
   "integrity" "sha512-Oqluz6zhGX8cyRaTQlFMPw80bSJVG2x/cFb8ZPhUILGgHka9SsokCCOQgpveePerqidZOrT14ipqfJb7ILcW5Q=="
@@ -4209,6 +4232,11 @@
     "has-symbols" "^1.0.1"
     "object-keys" "^1.1.1"
 
+"obliterator@^2.0.2":
+  "integrity" "sha512-lgHwxlxV1qIg1Eap7LgIeoBWIMFibOjbrYPIPJZcI1mmGAI2m3lNYpK12Y+GBdPQ0U1hRwSord7GIaawz962qQ=="
+  "resolved" "https://registry.npmjs.org/obliterator/-/obliterator-2.0.4.tgz"
+  "version" "2.0.4"
+
 "oboe@2.1.5":
   "integrity" "sha512-zRFWiF+FoicxEs3jNI/WYUrVEgA7DeET/InK0XQuudGHRg8iIob3cNPrJTKaz4004uaA9Pbe+Dwa8iluhjLZWA=="
   "resolved" "https://registry.npmjs.org/oboe/-/oboe-2.1.5.tgz"
@@ -5064,6 +5092,15 @@
     "call-bind" "^1.0.0"
     "get-intrinsic" "^1.0.2"
     "object-inspect" "^1.9.0"
+
+"sigma@^2.3.1":
+  "integrity" "sha512-YfQsVZf78CeIUv8EYLqp/yvhMwwBXGrbpy+rD1N2X9IqtJ11+VfQRjWfVqHDhjM8oPfWPsaJMtpWFQ8pIflvCA=="
+  "resolved" "https://registry.npmjs.org/sigma/-/sigma-2.3.1.tgz"
+  "version" "2.3.1"
+  dependencies:
+    "@yomguithereal/helpers" "^1.1.1"
+    "events" "^3.3.0"
+    "graphology-utils" "^2.5.0"
 
 "simple-concat@^1.0.0":
   "integrity" "sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q=="
