@@ -103,7 +103,7 @@ export default class AdminAppearance implements View {
                     el("header",
                         el(".link-container",
                             el("h2", "My Soulink"),
-                            el("a", { href: "https://so.link/dilrong" }, "https://so.link/dilrong"),
+                            el("a", { href: "https://soul.ink/dilrong" }, "https://soul.ink/dilrong"),
                         ),
                         el("a", "Share"),
                     ),

@@ -13,6 +13,7 @@ export default class Landing implements View {
             (this.container = el(".landing-view",
                 el("h1", "Soulink Router"),
                 el("a", "linktree", { click: () => { ViewUtil.go("/dilrong") } }),
+                el("a", "graph", { click: () => { ViewUtil.go("/graph") } }),
                 el("a", "admin", { click: () => { ViewUtil.go("/admin") } }),
             )),
         )
