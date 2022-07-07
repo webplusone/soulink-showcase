@@ -13,7 +13,7 @@ export default class AdminLink implements View {
         UserLayout.current.content.append(this.container = el(".admin-link-view",
             el("header",
                 el(".tab-container",
-                    el("a", "Links", { click: () => { ViewUtil.go("/admin") } }),
+                    el("a.active", "Links", { click: () => { ViewUtil.go("/admin") } }),
                     el("a", "Appearance", { click: () => { ViewUtil.go("/admin/appearance") } }),
                     el("a", "Settings", { click: () => { ViewUtil.go("/admin/settings") } }),
                     el("a", "Analytics", { click: () => { ViewUtil.go("/admin/analytics") } }),

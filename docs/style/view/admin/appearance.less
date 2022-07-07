@@ -45,7 +45,6 @@
 
     >article {
         display        : flex;
-        flex-direction : column;
         justify-content: center;
         max-width      : 1240px;
         width          : 100%;
@@ -53,56 +52,338 @@
         padding-top    : 32px;
         padding-left   : 8px;
         padding-right  : 8px;
+        gap            : 32px;
 
-        >h1 {
-            font-size  : 20px;
-            font-weight: 600;
-            width      : 100%;
+
+        @media @phone {
+            flex-direction: column;
         }
 
-        >h2 {
-            margin-top : 16px;
-            font-size  : 18px;
-            font-weight: 600;
-            width      : 100%;
-        }
+        >.setting-container {
+            width: 100%;
 
-        >p {
-            margin-top : 16px;
-            font-size  : 14px;
-            font-weight: 300;
-        }
+            >h1 {
+                font-size  : 20px;
+                font-weight: 600;
+                width      : 100%;
+            }
 
-        >section {
-            background-color: #fff;
-            color           : rgb(0, 0, 0);
-            box-shadow      : rgb(10 11 13 / 8%) 0px 2px 4px 0px;
-            border-radius   : 4px;
-            padding         : 16px;
-            margin-top      : 16px;
-        }
+            >h2 {
+                margin-top : 32px;
+                font-size  : 18px;
+                font-weight: 600;
+                width      : 100%;
+            }
 
-        >.profile-container {
-            >.input-container {
-                display       : flex;
-                flex-direction: column;
-                margin-top    : 8px;
-                gap           : 8px;
+            >h3 {
+                margin-top : 32px;
+                font-size  : 18px;
+                font-weight: 600;
+                width      : 100%;
+            }
+
+            >p {
+                margin-top : 16px;
+                font-size  : 14px;
+                font-weight: 300;
+            }
+
+            >section {
+                background-color: #fff;
+                color           : rgb(0, 0, 0);
+                box-shadow      : rgb(10 11 13 / 8%) 0px 2px 4px 0px;
+                border-radius   : 4px;
+                padding         : 16px;
+                margin-top      : 16px;
+            }
+
+            >.profile-container {
+                >.input-container {
+                    display       : flex;
+                    flex-direction: column;
+                    margin-top    : 8px;
+                    gap           : 8px;
+
+                    >p {
+                        font-size  : 14px;
+                        font-weight: 400;
+                    }
+
+                    >input {
+                        padding      : 8px;
+                        border-bottom: 1px solid #aaa;
+                    }
+
+                    >textarea {
+                        padding      : 8px;
+                        border       : 1px solid #aaa;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            >.background-container {
+                >.grid {
+                    display              : grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap                  : 16px;
+
+                    @media @phone {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    >.item {
+                        display       : flex;
+                        flex-direction: column;
+                        align-items   : center;
+                        text-align    : center;
+                        padding       : 4px;
+
+                        >.content {
+                            background-color: #000;
+                            width           : 150px;
+                            height          : 200px;
+                            border-radius   : 4px;
+                            border          : 1px solid #D2D7DD;
+                        }
+
+                        >p {
+                            margin-top : 8px;
+                            font-weight: 300;
+                            font-size  : 14px;
+                        }
+
+                        &:hover {
+                            border-radius: 4px;
+                            border       : 1px solid #D2D7DD;
+                        }
+                    }
+                }
 
                 >p {
+                    margin     : 16px 0px;
                     font-size  : 14px;
-                    font-weight: 400;
+                    font-weight: 600;
+                    width      : 100%;
                 }
 
-                >input {
-                    padding      : 8px;
-                    border-bottom: 1px solid #aaa;
+                >.input-container {
+                    display: flex;
+
+                    >.color {
+                        border-radius   : 4px;
+                        background-color: #888;
+                        border          : 1px solid #D2D7DD;
+                        width           : 50px;
+                        height          : 50px;
+                    }
+
+                    >input {
+                        margin-left  : 16px;
+                        border-radius: 4px;
+                        border       : 1px solid #D2D7DD;
+                        height       : 50px;
+                        padding      : 0px 8px;
+                    }
+                }
+            }
+
+            >.button-container {
+
+                @media @phone {
+                    grid-template-columns: repeat(1, 1fr);
                 }
 
-                >textarea {
-                    padding      : 8px;
+                >.grid {
+                    display              : grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap                  : 16px;
+
+                    >.item {
+                        display       : flex;
+                        flex-direction: column;
+                        align-items   : center;
+                        text-align    : center;
+                        padding       : 4px;
+
+                        >.fill-base {
+                            background-color: #000;
+                            width           : 150px;
+                            height          : 50px;
+                        }
+
+                        >.fill-round {
+                            background-color: #000;
+                            width           : 150px;
+                            height          : 50px;
+                            border-radius   : 8px;
+                        }
+
+                        >.fill-round-large {
+                            background-color: #000;
+                            width           : 150px;
+                            height          : 50px;
+                            border-radius   : 32px;
+                        }
+
+                        >.outline-base {
+                            width : 150px;
+                            height: 50px;
+                            border: 1px solid #000;
+                        }
+
+                        >.outline-round {
+                            width        : 150px;
+                            height       : 50px;
+                            border-radius: 8px;
+                            border       : 1px solid #000;
+                        }
+
+                        >.outline-round-large {
+                            width        : 150px;
+                            height       : 50px;
+                            border-radius: 32px;
+                            border       : 1px solid #000;
+                        }
+
+                        >p {
+                            margin-top : 8px;
+                            font-weight: 300;
+                            font-size  : 14px;
+                        }
+
+                        &:hover {
+                            border-radius: 4px;
+                            border       : 1px solid #aaa;
+                        }
+                    }
+                }
+
+                >p {
+                    margin     : 16px 0px;
+                    font-size  : 14px;
+                    font-weight: 600;
+                    width      : 100%;
+                }
+
+                >.input-container {
+                    display: flex;
+
+                    >.color {
+                        border-radius   : 4px;
+                        background-color: #aaa;
+                        width           : 50px;
+                        height          : 50px;
+                    }
+
+                    >input {
+                        margin-left  : 16px;
+                        border-radius: 4px;
+                        border       : 1px solid #aaa;
+                        height       : 50px;
+                        padding      : 0px 8px;
+                    }
+                }
+            }
+        }
+
+        >.preview-container {
+            width: 100%;
+
+            >header {
+                display        : flex;
+                justify-content: space-between;
+
+                >.link-container {
+                    display    : flex;
+                    align-items: center;
+
+                    >h2 {
+                        font-weight: 600;
+                        width      : 100%;
+                    }
+
+                    >a {
+                        margin-left: 8px;
+                        font-size  : 14px;
+                        font-weight: 400;
+                    }
+                }
+
+                >a {
+                    font-size    : 14px;
+                    font-weight  : 500;
                     border       : 1px solid #aaa;
+                    padding      : 8px;
                     border-radius: 4px;
+
+                    &:hover {
+                        background-color: #aaa;
+                    }
+                }
+            }
+
+            >article {
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+
+                >.preview-container {
+                    display         : flex;
+                    align-items     : center;
+                    justify-content : center;
+                    margin-top      : 32px;
+                    max-width       : 320px;
+                    width           : 100%;
+                    height          : 700px;
+                    background-color: #000;
+                    border-radius   : 32px;
+
+                    >.content {
+                        margin          : auto;
+                        background-color: #fff;
+                        max-width       : 300px;
+                        width           : 100%;
+                        height          : 680px;
+                        border-radius   : 32px;
+                        padding         : 8px;
+                        display         : flex;
+                        flex-direction  : column;
+                        margin          : auto;
+                        padding         : 24px 12px;
+
+                        >header {
+                            display       : flex;
+                            flex-direction: column;
+                            align-items   : center;
+
+                            >.img-container {
+                                width           : 96px;
+                                height          : 96px;
+                                background-color: rgb(96, 105, 108);
+                                color           : rgb(255, 255, 255);
+                                border-radius   : 100%;
+                                display         : flex;
+                                justify-content : center;
+                                align-items     : center;
+                                font-weight     : 600;
+                                font-size       : 32px;
+                            }
+
+                            >h1 {
+                                display        : flex;
+                                justify-content: center;
+                                margin-top     : 16px;
+                                font-weight    : 500;
+                            }
+                        }
+
+                        >article {
+                            display       : flex;
+                            flex-direction: column;
+                            margin-top    : 32px;
+                        }
+                    }
                 }
             }
         }
