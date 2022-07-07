@@ -6,6 +6,7 @@ import AdminAppearance from "./view/admin/Appearance";
 import AdminLink from "./view/admin/Link";
 import AdminSettings from "./view/admin/Settings";
 import GraphTree from "./view/GraphTree";
+import Landing from "./view/Landing";
 import LinkTree from "./view/LinkTree";
 import UserLayout from "./view/UserLayout";
 
@@ -14,6 +15,7 @@ import UserLayout from "./view/UserLayout";
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
     SkyRouter.route("**", UserLayout);
+    SkyRouter.route("", Landing);
     SkyRouter.route("dilrong", LinkTree);
     SkyRouter.route("graph", GraphTree);
     SkyRouter.route("admin", AdminLink);

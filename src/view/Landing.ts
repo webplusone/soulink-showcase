@@ -1,13 +1,19 @@
 import { BodyNode, DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
+import UserLayout from "./UserLayout";
+import ViewUtil from "./ViewUtil";
 
 export default class Landing implements View {
 
     private container: DomNode;
 
     constructor() {
-        BodyNode.append(
-            (this.container = el(".admin-layout",
+        UserLayout.current.title = "";
+        UserLayout.current.content.append(
+            (this.container = el(".landing-view",
+                el("h1", "Soulink Router"),
+                el("a", "linktree", { click: () => { ViewUtil.go("/dilrong") } }),
+                el("a", "admin", { click: () => { ViewUtil.go("/admin") } }),
             )),
         )
     }
