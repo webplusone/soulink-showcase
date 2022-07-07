@@ -963,10 +963,35 @@ body {
   padding: 16px;
   margin-top: 16px;
 }
+.admin-appearance-view > article > .setting-container > .profile-container > .img-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.admin-appearance-view > article > .setting-container > .profile-container > .img-container > img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.admin-appearance-view > article > .setting-container > .profile-container > .img-container > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 240px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+}
+.admin-appearance-view > article > .setting-container > .profile-container > .img-container > .remove {
+  background-color: #aaa;
+}
 .admin-appearance-view > article > .setting-container > .profile-container > .input-container {
   display: flex;
   flex-direction: column;
-  margin-top: 8px;
+  margin-top: 20px;
   gap: 8px;
 }
 .admin-appearance-view > article > .setting-container > .profile-container > .input-container > p {

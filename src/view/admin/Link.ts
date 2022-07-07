@@ -54,7 +54,7 @@ export default class AdminLink implements View {
                                     el("h1", "@dilrong"),
                                 ),
                                 el("article",
-                                    new LinkItem("dilrong", "https://blog.naver.com/dilrong", "https://d1fdloi71mui9q.cloudfront.net/BqAUnvzJSJaHXymbLCNB_20180607225726_2.jpeg"),
+                                    new LinkItem("dilrong", "https://blog.naver.com/dilrong", "/images/img/mock.png"),
                                 ),
                             ),
                         ),
