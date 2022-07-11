@@ -1,6 +1,7 @@
 import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
-import LinkItem from "../../compoent/LinkItem";
+import LinkItem from "../../component/LinkItem";
+import PickNfts from "../../component/shared/dialogue/PickNfts";
 import UserLayout from "../UserLayout";
 import ViewUtil from "../ViewUtil";
 
@@ -25,7 +26,11 @@ export default class AdminAppearance implements View {
                     el("section.profile-container",
                         el(".img-container",
                             el("img", { src: "/images/img/mock.png", alt: "Profile" }),
-                            el("a", "Pick an image"),
+                            el("a", "Pick an NFT", {
+                                click: () => {
+                                    new PickNfts("Pick an NFT", "pick your profile NFT", "OK", () => { });
+                                }
+                            }),
                             el("a.remove", "Remove"),
                         ),
                         el(".input-container",
@@ -59,6 +64,15 @@ export default class AdminAppearance implements View {
                         el(".input-container",
                             el(".color"),
                             el("input", { value: "#888888" }),
+                        ),
+                        el("p", "Background NFT"),
+                        el(".button-container",
+                            el("a", "Pick an NFT", {
+                                click: () => {
+                                    new PickNfts("Pick an NFT", "pick your background NFT", "OK", () => { });
+                                }
+                            }),
+                            el("a.remove", "Remove"),
                         ),
                     ),
                     el("h3", "Buttons"),

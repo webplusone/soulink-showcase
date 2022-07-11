@@ -1,6 +1,6 @@
 import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
-import LinkItem from "../compoent/LinkItem";
+import LinkItem from "../component/LinkItem";
 import UserLayout from "./UserLayout";
 
 export default class LinkTree implements View {

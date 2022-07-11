@@ -28,6 +28,14 @@ export default class AdminSettings implements View {
                     ),
                     el("p", "Show your support for important causes with a profile banner. Only one banner can be active at a time.")
                 ),
+                el("h2", "Graph"),
+                el("section",
+                    el("header",
+                        el("h3", "Show your graph"),
+                        el("a.on", "On"),
+                    ),
+                    el("p", "Show your support for important causes with a profile graph. ")
+                ),
             ),
         ));
     }
