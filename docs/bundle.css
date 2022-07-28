@@ -169,13 +169,20 @@ input {
   visibility: hidden;
 }
 @font-face {
-  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
-  @import url("https://p.typekit.net/p.css?s=1&k=zoc8uhz&ht=tk&f=15665.15666&a=43843172&app=typekit&e=css");
+  font-family: "FONTSPRINGDEMO-ProximaNova";
+  src: url("../fonts/Fontspring-DEMO-proximanovacond-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaExt.woff2") format("woff2");
+}
+@font-face {
+  font-family: "OCRAStd";
+  src: url("../fonts/OCRAStd-Regular.woff2") format("woff2");
 }
 body {
   margin: auto;
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-  background-color: #f1f1f1;
+  font-family: "FONTSPRINGDEMO-ProximaNova";
 }
 .pc-menu {
   flex-grow: 1;
@@ -632,22 +639,27 @@ body {
 .select > ul > li:hover {
   background: rgba(255, 242, 0, 0.2);
 }
+.link-item {
+  display: flex;
+  justify-content: center;
+}
 .link-item > a {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 53px;
   overflow: hidden;
-  margin-bottom: 16px;
+  max-width: 180px;
+  width: 100%;
+  height: 36px;
   padding: 8px;
   border: none;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   color: #000000;
-  box-shadow: rgba(10, 11, 13, 0.08) 0px 2px 4px 0px;
   border-radius: 4px;
-  font-weight: 400;
   text-decoration: none;
+  border-radius: 18px;
+  font-size: 10px;
+  font-family: "FONTSPRINGDEMO-ProximaNova";
 }
 .link-item > a:hover {
   transform: scale(0.99);
@@ -655,19 +667,51 @@ body {
 .link-item > a > img {
   width: 45px;
   height: 45px;
+  border-radius: 100%;
 }
 .link-item > a > p {
   text-align: center;
   width: 100%;
 }
+.nft-item {
+  max-width: 78px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.nft-item > .img-container {
+  width: 78px;
+  height: 78px;
+  margin: 0 0 6px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.nft-item > P {
+  font-family: "FONTSPRINGDEMO-ProximaNova";
+  font-size: 10px;
+}
+.user-layout {
+  background: linear-gradient(#5AADFB, #EA8889);
+}
 .user-layout > main {
+  justify-content: center;
+  max-width: 1468px;
+  width: 100%;
   min-height: 100vh;
+  margin: auto;
 }
 .user-layout > footer {
   display: flex;
   justify-content: center;
   font-size: 14px;
   font-weight: 300;
+}
+.user-layout > footer > a > img {
+  width: 60px;
+  height: 65px;
 }
 .landing-view {
   display: flex;
@@ -708,7 +752,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 680px;
+  max-width: 1468px;
+  width: 100%;
   margin: auto;
   padding: 24px 12px;
 }
@@ -717,9 +762,76 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.link-tree-view > header > .top-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "OCRAStd";
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 75px;
+}
+.link-tree-view > header > .top-container > .stepper-wrapper {
+  font-family: "HelveticaNeue";
+  font-size: 8px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.link-tree-view > header > .top-container > .stepper-wrapper > .stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.link-tree-view > header > .top-container > .stepper-wrapper > .stepper-item ::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+.link-tree-view > header > .top-container > .stepper-wrapper > .stepper-item ::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+.link-tree-view > header > .top-container > .stepper-wrapper > .stepper-item :first-child::before {
+  content: none;
+}
+.link-tree-view > header > .top-container > .stepper-wrapper > .stepper-item :last-child::after {
+  content: none;
+}
+.link-tree-view > header > .top-container > .stepper-wrapper > .stepper-item > .stepper-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 6px;
+  background-color: #4bb543;
+}
+.link-tree-view > header > .top-container > a {
+  color: #fff;
+  text-decoration: none;
+}
 .link-tree-view > header > .img-container {
-  width: 96px;
-  height: 96px;
+  width: 78px;
+  height: 78px;
   background-color: #60696c;
   color: #ffffff;
   border-radius: 100%;
@@ -730,15 +842,153 @@ body {
   font-size: 32px;
 }
 .link-tree-view > header > h1 {
+  font-family: "OCRAStd";
   display: flex;
   justify-content: center;
-  margin-top: 16px;
+  margin-top: 10px;
   font-weight: 500;
+}
+.link-tree-view > header > .add-souler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-family: "OCRAStd";
+  color: #55ffb6;
+  border-radius: 18px;
+  border: solid 2px #55ffb6;
+  width: 180px;
+  height: 36px;
+  font-size: 10px;
 }
 .link-tree-view > article {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  margin: auto;
   margin-top: 32px;
+  width: 100%;
+}
+.nft-tree-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1468px;
+  width: 100%;
+  margin: auto;
+  padding: 24px 12px;
+}
+.nft-tree-view > header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nft-tree-view > header > .top-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "OCRAStd";
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 75px;
+}
+.nft-tree-view > header > .top-container > .stepper-wrapper {
+  font-family: "HelveticaNeue";
+  font-size: 8px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.nft-tree-view > header > .top-container > .stepper-wrapper > .stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.nft-tree-view > header > .top-container > .stepper-wrapper > .stepper-item ::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+.nft-tree-view > header > .top-container > .stepper-wrapper > .stepper-item ::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+.nft-tree-view > header > .top-container > .stepper-wrapper > .stepper-item :first-child::before {
+  content: none;
+}
+.nft-tree-view > header > .top-container > .stepper-wrapper > .stepper-item :last-child::after {
+  content: none;
+}
+.nft-tree-view > header > .top-container > .stepper-wrapper > .stepper-item > .stepper-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 6px;
+  background-color: #4bb543;
+}
+.nft-tree-view > header > .top-container > a {
+  color: #fff;
+  text-decoration: none;
+}
+.nft-tree-view > header > .img-container {
+  width: 78px;
+  height: 78px;
+  background-color: #60696c;
+  color: #ffffff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 32px;
+}
+.nft-tree-view > header > h1 {
+  font-family: "OCRAStd";
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-weight: 500;
+}
+.nft-tree-view > header > .add-souler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-family: "OCRAStd";
+  color: #55ffb6;
+  border-radius: 18px;
+  border: solid 2px #55ffb6;
+  width: 180px;
+  height: 36px;
+  font-size: 10px;
+}
+.nft-tree-view > article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 32px;
+  width: 100%;
 }
 .graph-tree-view {
   display: flex;

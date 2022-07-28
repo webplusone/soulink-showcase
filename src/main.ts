@@ -8,6 +8,7 @@ import AdminSettings from "./view/admin/Settings";
 import GraphTree from "./view/GraphTree";
 import Landing from "./view/Landing";
 import LinkTree from "./view/LinkTree";
+import NftTree from "./view/NftTree";
 import UserLayout from "./view/UserLayout";
 
 (async () => {
@@ -17,6 +18,7 @@ import UserLayout from "./view/UserLayout";
     SkyRouter.route("**", UserLayout);
     SkyRouter.route("", Landing);
     SkyRouter.route("dilrong", LinkTree);
+    SkyRouter.route("dilrong/nft", NftTree);
     SkyRouter.route("graph", GraphTree);
     SkyRouter.route("admin", AdminLink);
     SkyRouter.route("admin/appearance", AdminAppearance);

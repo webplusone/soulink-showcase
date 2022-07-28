@@ -18,7 +18,7 @@ export default class UserLayout implements View {
                 ),
                 el("footer",
                     el("a",
-                        el("p", "Soulink"),
+                        el("img", { src: "/images/icn/soullink-white.png", alt: "soulink" }),
                     ),
                 ),
             )),

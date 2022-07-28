@@ -8,17 +8,36 @@ export default class LinkTree implements View {
     private container: DomNode;
 
     constructor() {
-        UserLayout.current.title = "@dilrong";
+        UserLayout.current.title = "@NAME";
         UserLayout.current.content.append(this.container = el(".link-tree-view",
             el("header",
+                el(".top-container",
+                    el("a", { href: "/" }, "About,Soulink"),
+                    el(".stepper-wrapper",
+                        el("a.stepper-item",
+                            el(".stepper-counter", ""),
+                            el("p.stepper-title", "Links"),
+                        ),
+                        el("a.stepper-item",
+                            el(".stepper-counter", ""),
+                            el("p.stepper-title", "NFTs"),
+                        ),
+                        el("a.stepper-item",
+                            el(".stepper-counter", ""),
+                            el("p.stepper-title", "Soulmate"),
+                        ),
+                    ),
+                    el("a", "Wallet.eth"),
+                ),
                 el(".img-container",
                     el("img", { src: "", alt: "" }),
-                    el("p", "D"),
+                    el("p", "N"),
                 ),
-                el("h1", "@dilrong"),
+                el("h1", "NAME"),
+                el("a.add-souler", "ADD Souler"),
             ),
             el("article",
-                new LinkItem("dilrong", "https://blog.naver.com/dilrong", "https://d1fdloi71mui9q.cloudfront.net/BqAUnvzJSJaHXymbLCNB_20180607225726_2.jpeg"),
+                new LinkItem("OPENSEA", "https://opensea.io/"),
             ),
         ));
     }
