@@ -2,6 +2,7 @@ import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
 import LinkItem from "../component/LinkItem";
 import NftItem from "../component/NftItem";
+import HoldersPopup from "../component/shared/dialogue/HoldersPopup";
 import UserLayout from "./UserLayout";
 
 export default class NftTree implements View {
@@ -12,20 +13,22 @@ export default class NftTree implements View {
         UserLayout.current.title = "@NAME - NFT";
         UserLayout.current.content.append(this.container = el(".nft-tree-view",
             el("header",
+                new HoldersPopup(),
                 el(".top-container",
-                    el("a", { href: "/" }, "About,Soulink"),
+                    el("a", { href: "/" }, "About, Soulink"),
                     el(".stepper-wrapper",
+                        el(".line"),
                         el("a.stepper-item",
                             el(".stepper-counter", ""),
-                            el("p.stepper-title", "Links"),
+                            el("p.stepper-title", ""),
                         ),
                         el("a.stepper-item",
                             el(".stepper-counter", ""),
-                            el("p.stepper-title", "NFTs"),
+                            el("p.stepper-title.active", "NFTs"),
                         ),
                         el("a.stepper-item",
                             el(".stepper-counter", ""),
-                            el("p.stepper-title", "Soulmate"),
+                            el("p.stepper-title", ""),
                         ),
                     ),
                     el("a", "Wallet.eth"),

@@ -23,6 +23,7 @@
             margin-bottom  : 75px;
 
             >.stepper-wrapper {
+                position       : relative;
                 font-family    : "HelveticaNeue";
                 font-size      : 8px;
                 font-weight    : bold;
@@ -31,34 +32,24 @@
                 justify-content: space-between;
                 margin-bottom  : 20px;
 
+                >.line {
+                    position     : absolute;
+                    content      : "";
+                    border-bottom: 1px solid #fff;
+                    width        : 136px;
+                    top          : 2px;
+                    left         : 30px;
+                }
+
                 >.stepper-item {
                     position      : relative;
                     display       : flex;
                     flex-direction: column;
                     align-items   : center;
                     flex          : 1;
+                    padding       : 0px 26.5px;
 
-                    ::before {
-                        position     : absolute;
-                        content      : "";
-                        border-bottom: 2px solid #fff;
-                        width        : 100%;
-                        top          : 20px;
-                        left         : -50%;
-                        z-index      : 2;
-                    }
-
-                    ::after {
-                        position     : absolute;
-                        content      : "";
-                        border-bottom: 2px solid #fff;
-                        width        : 100%;
-                        top          : 20px;
-                        left         : 50%;
-                        z-index      : 2;
-                    }
-
-                    :first-child::before {
+                    :first-child::after {
                         content: none;
                     }
 
@@ -67,17 +58,20 @@
                     }
 
                     >.stepper-counter {
-                        position        : relative;
-                        z-index         : 5;
-                        display         : flex;
-                        justify-content : center;
-                        align-items     : center;
-                        width           : 6px;
-                        height          : 6px;
-                        border-radius   : 50%;
-                        background      : #fff;
-                        margin-bottom   : 6px;
-                        background-color: #4bb543;
+                        position       : relative;
+                        z-index        : 5;
+                        display        : flex;
+                        justify-content: center;
+                        align-items    : center;
+                        width          : 6px;
+                        height         : 6px;
+                        border-radius  : 50%;
+                        background     : #fff;
+                        margin-bottom  : 6px;
+                    }
+
+                    >.stepper-counter.active {
+                        background-color: #55ffb6;
                     }
                 }
             }
