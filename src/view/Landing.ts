@@ -12,8 +12,10 @@ export default class Landing implements View {
         UserLayout.current.content.append(
             (this.container = el(".landing-view",
                 el("h1", "Soulink Router"),
+                el("a", "Intro", { click: () => { ViewUtil.go("/intro") } }),
                 el("a", "linktree", { click: () => { ViewUtil.go("/dilrong") } }),
                 el("a", "graph", { click: () => { ViewUtil.go("/graph") } }),
+                el("a", "business card", { click: () => { ViewUtil.go("/dilrong/card") } }),
                 el("a", "admin", { click: () => { ViewUtil.go("/admin") } }),
             )),
         )

@@ -1,0 +1,110 @@
+.business-card-view {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    max-width      : 1468px;
+    width          : 100%;
+    margin         : auto;
+    padding        : 24px 12px;
+
+    >header {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+
+        >.top-container {
+            width          : 100%;
+            display        : flex;
+            justify-content: space-between;
+            font-family    : "OCRAStd";
+            font-size      : 16px;
+            text-decoration: none;
+            color          : #fff;
+            margin-bottom  : 75px;
+
+            >.stepper-wrapper {
+                position       : relative;
+                font-family    : "HelveticaNeue";
+                font-size      : 8px;
+                font-weight    : bold;
+                color          : #000;
+                display        : flex;
+                justify-content: space-between;
+                margin-bottom  : 20px;
+
+                >.line {
+                    position     : absolute;
+                    content      : "";
+                    border-bottom: 1px solid #fff;
+                    width        : 126px;
+                    top          : 2px;
+                    left         : 40px;
+                }
+            }
+
+            >a {
+                color          : #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    >main {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        margin         : auto;
+
+        >.img-container {
+            width           : 78px;
+            height          : 78px;
+            background-color: rgb(96, 105, 108);
+            color           : rgb(255, 255, 255);
+            border-radius   : 100%;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            font-weight     : 600;
+            font-size       : 32px;
+        }
+
+        >h1 {
+            font-family    : "OCRAStd";
+            display        : flex;
+            justify-content: center;
+            margin-top     : 10px;
+            margin-bottom  : 6px;
+            font-weight    : 500;
+        }
+
+        >p {
+            text-align: center;
+        }
+
+        >.qr-container {
+            margin-top   : 29px;
+            margin-bottom: 35px;
+
+            >img {
+                max-width : 280px;
+                max-height: 280px;
+                width     : 100%;
+                height    : 100%;
+            }
+        }
+
+        >.add-souler {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            font-family    : "OCRAStd";
+            color          : #55ffb6;
+            border-radius  : 28px;
+            border         : solid 2px #55ffb6;
+            width          : 280px;
+            height         : 56px;
+            font-size      : 15px;
+        }
+    }
+}
