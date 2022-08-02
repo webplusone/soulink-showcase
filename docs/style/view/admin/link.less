@@ -1,219 +1,193 @@
 .admin-link-view {
-    display       : flex;
-    flex-direction: column;
-    width         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    max-width      : 1468px;
+    width          : 100%;
+    margin         : auto;
+    padding        : 24px 12px;
 
     >header {
-        display         : flex;
-        justify-content : center;
-        align-items     : center;
-        width           : 100%;
-        background-color: #fff;
-        color           : rgb(0, 0, 0);
-        box-shadow      : rgb(10 11 13 / 8%) 0px 2px 4px 0px;
-        height          : 64px;
-        padding         : 0px 8px;
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
 
-        >.tab-container {
-            max-width      : 1240px;
+        >.top-container {
             width          : 100%;
             display        : flex;
-            align-items    : center;
             justify-content: space-between;
-            height         : 100%;
+            font-family    : "OCRAStd";
+            font-size      : 16px;
+            text-decoration: none;
+            color          : #fff;
+            margin-bottom  : 75px;
 
-            >a {
-                display    : flex;
-                align-items: center;
-                height     : 100%;
-                font-size  : 16px;
-                font-weight: 500;
-                color      : #aaa;
+            >.stepper-wrapper {
+                position       : relative;
+                font-family    : "HelveticaNeue";
+                font-size      : 8px;
+                font-weight    : bold;
+                color          : #000;
+                display        : flex;
+                justify-content: space-between;
+                margin-bottom  : 20px;
 
-                &:hover {
-                    color        : #000;
-                    border-bottom: 2px #000 solid;
+                >.line {
+                    position     : absolute;
+                    content      : "";
+                    border-bottom: 1px solid #fff;
+                    width        : 65%;
+                    top          : 2px;
+                    left         : 40px;
+                }
+
+                >.stepper-item {
+                    position      : relative;
+                    display       : flex;
+                    flex-direction: column;
+                    align-items   : center;
+                    flex          : 1;
+                    padding       : 0px 26.5px;
+
+                    :first-child::after {
+                        content: none;
+                    }
+
+                    :last-child::after {
+                        content: none;
+                    }
+
+                    >.stepper-counter {
+                        position       : relative;
+                        z-index        : 5;
+                        display        : flex;
+                        justify-content: center;
+                        align-items    : center;
+                        width          : 6px;
+                        height         : 6px;
+                        border-radius  : 50%;
+                        background     : #fff;
+                        margin-bottom  : 6px;
+                    }
+
+                    >.stepper-counter.active {
+                        background-color: #55ffb6;
+                    }
                 }
             }
 
-            >.active {
-                color        : #000;
-                border-bottom: 2px #000 solid;
+            >a {
+                color          : #fff;
+                text-decoration: none;
             }
+        }
+
+        >.img-container {
+            position        : relative;
+            width           : 78px;
+            height          : 78px;
+            background-color: rgb(96, 105, 108);
+            color           : rgb(255, 255, 255);
+            border-radius   : 100%;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            font-weight     : 600;
+            font-size       : 32px;
+
+            >.badge {
+                position: absolute;
+                top     : 0px;
+                right   : 5px;
+            }
+        }
+
+        >h1 {
+            font-family    : "OCRAStd";
+            display        : flex;
+            justify-content: center;
+            margin-top     : 10px;
+            font-weight    : 500;
+        }
+
+        >.souler-name {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            margin-top     : 25px;
+            font-family    : "OCRAStd";
+            color          : #55ffb6;
+            border-radius  : 18px;
+            border         : solid 2px #55ffb6;
+            width          : 180px;
+            height         : 36px;
+            font-size      : 10px;
         }
     }
 
     >article {
         display        : flex;
         justify-content: center;
-        max-width      : 1240px;
-        width          : 100%;
+        align-items    : center;
+        flex-direction : column;
         margin         : auto;
-        padding-top    : 32px;
-        padding-left   : 8px;
-        padding-right  : 8px;
-        gap            : 32px;
+        margin-top     : 32px;
+        width          : 100%;
 
-        @media @phone {
-            flex-direction: column;
-        }
+        >.item-container {
+            display        : flex;
+            gap            : 34px;
+            justify-content: center;
+            align-items    : center;
+            margin         : auto;
 
-        >.setting-container {
-            width: 100%;
-
-            >h1 {
-                font-size  : 20px;
-                font-weight: 600;
-                width      : 100%;
+            @media @phone {
+                gap           : 8px;
+                flex-direction: column;
             }
 
-            >.button-container {
-                display   : flex;
-                width     : 100%;
-                margin-top: 16px;
-
-                >a {
-                    display         : flex;
-                    justify-content : center;
-                    align-items     : center;
-                    color           : rgb(255, 255, 255);
-                    background-color: rgb(129, 41, 217);
-                    transition      : all 75ms ease-out 0s;
-                    max-width       : 300px;
-                    width           : 100%;
-                    height          : 50px;
-                    border-radius   : 4px;
-                }
-            }
-
-            >.new-link-item {
-                padding         : 16px;
-                margin-top      : 16px;
+            >.link {
                 display         : flex;
-                flex-direction  : column;
-                border-radius   : 4px;
+                justify-content : center;
+                align-items     : center;
+                font-size       : 10px;
+                width           : 180px;
+                height          : 36px;
+                opacity         : 0.6;
+                border-radius   : 18px;
                 background-color: #fff;
-                color           : rgb(0, 0, 0);
-                box-shadow      : rgb(10 11 13 / 8%) 0px 2px 4px 0px;
-                max-width       : 640px;
+            }
 
-                >header {
-                    display        : flex;
-                    justify-content: space-around;
-                    margin-bottom  : 16px;
+            >input {
+                height          : 36px;
+                padding         : 0px 8px;
+                background-color: transparent;
+            }
 
-                    >input {
-                        width: 100%;
-                    }
-
-                    >a {
-                        >img {
-                            width: 18px;
-                        }
-                    }
+            >.delete {
+                >img {
+                    width: 16px;
                 }
             }
         }
 
-        >.preview-container {
-            width: 100%;
+        >.add-button {
+            margin-top: 8px;
+        }
 
-            >header {
-                display        : flex;
-                justify-content: space-between;
-
-                >.link-container {
-                    display    : flex;
-                    align-items: center;
-
-                    >h2 {
-                        font-weight: 600;
-                        width      : 100%;
-                    }
-
-                    >a {
-                        margin-left: 8px;
-                        font-size  : 14px;
-                        font-weight: 400;
-                    }
-                }
-
-                >a {
-                    font-size    : 14px;
-                    font-weight  : 500;
-                    border       : 1px solid #aaa;
-                    padding      : 8px;
-                    border-radius: 4px;
-
-                    &:hover {
-                        background-color: #aaa;
-                    }
-                }
-            }
-
-            >article {
-                display        : flex;
-                align-items    : center;
-                justify-content: center;
-
-                >.preview-container {
-                    display         : flex;
-                    align-items     : center;
-                    justify-content : center;
-                    margin-top      : 32px;
-                    max-width       : 320px;
-                    width           : 100%;
-                    height          : 700px;
-                    background-color: #000;
-                    border-radius   : 32px;
-
-                    >.content {
-                        margin          : auto;
-                        background-color: #fff;
-                        max-width       : 300px;
-                        width           : 100%;
-                        height          : 680px;
-                        border-radius   : 32px;
-                        padding         : 8px;
-                        display         : flex;
-                        flex-direction  : column;
-                        margin          : auto;
-                        padding         : 24px 12px;
-
-                        >header {
-                            display       : flex;
-                            flex-direction: column;
-                            align-items   : center;
-
-                            >.img-container {
-                                width           : 96px;
-                                height          : 96px;
-                                background-color: rgb(96, 105, 108);
-                                color           : rgb(255, 255, 255);
-                                border-radius   : 100%;
-                                display         : flex;
-                                justify-content : center;
-                                align-items     : center;
-                                font-weight     : 600;
-                                font-size       : 32px;
-                            }
-
-                            >h1 {
-                                display        : flex;
-                                justify-content: center;
-                                margin-top     : 16px;
-                                font-weight    : 500;
-                            }
-                        }
-
-                        >article {
-                            display       : flex;
-                            flex-direction: column;
-                            margin-top    : 32px;
-                        }
-                    }
-                }
-            }
+        >.save-button {
+            margin-top      : 46px;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            max-width       : 180px;
+            width           : 100%;
+            height          : 36px;
+            font-family     : "OCRAStd";
+            font-size       : 14px;
+            border          : solid 2px #55ffb6;
+            border-radius   : 18px;
+            background-color: #55ffb6;
         }
     }
 }

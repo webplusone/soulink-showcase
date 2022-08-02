@@ -4,7 +4,9 @@ import superagent from "superagent";
 import AdminAnalytics from "./view/admin/Analytics";
 import AdminAppearance from "./view/admin/Appearance";
 import AdminLink from "./view/admin/Link";
+import AdminNft from "./view/admin/Nft";
 import AdminSettings from "./view/admin/Settings";
+import AdminSoulmate from "./view/admin/Soulmate";
 import BaseLayout from "./view/BaseLayout";
 import BusinessCard from "./view/BusinessCard";
 import GraphTree from "./view/GraphTree";
@@ -22,7 +24,7 @@ import UserLayout from "./view/UserLayout";
     msg.parseCSV((await superagent.get("/msg.csv")).text);
 
     SkyRouter.route("**", UserLayout, ["intro", "mint", "mint/success", "mint/fail"]);
-    // SkyRouter.route("", Landing);
+    SkyRouter.route("", Landing);
 
     SkyRouter.route("dilrong", LinkTree);
     SkyRouter.route("dilrong/nft", NftTree);
@@ -30,6 +32,8 @@ import UserLayout from "./view/UserLayout";
     SkyRouter.route("graph", GraphTree);
 
     SkyRouter.route("admin", AdminLink);
+    SkyRouter.route("admin/nfts", AdminNft);
+    SkyRouter.route("admin/soulmate", AdminSoulmate);
     SkyRouter.route("admin/appearance", AdminAppearance);
     SkyRouter.route("admin/settings", AdminSettings);
     SkyRouter.route("admin/analytics", AdminAnalytics);
